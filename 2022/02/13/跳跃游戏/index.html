@@ -19,26 +19,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="篮球🏀">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不务正业的日子">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta name="description" content="算法：能到达某一个位置，则在该位置之前的每个位置都能到达。          通过计算最远距离max之前每个位置能到达的最远距离d（下标+数组元素），从而不断更新最远距离max          如果最远距离max大于数组最后位置，返回true，其余返回else 解题代码：class Solution {    public boolean canJump(int[] nums) {">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 55.跳跃游戏">
+<meta property="og:url" content="http://example.com/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="不务正业的日子">
-<meta property="og:description" content="篮球🏀">
+<meta property="og:description" content="算法：能到达某一个位置，则在该位置之前的每个位置都能到达。          通过计算最远距离max之前每个位置能到达的最远距离d（下标+数组元素），从而不断更新最远距离max          如果最远距离max大于数组最后位置，返回true，其余返回else 解题代码：class Solution {    public boolean canJump(int[] nums) {">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-13T14:14:07.836Z">
+<meta property="article:modified_time" content="2022-02-13T14:19:41.758Z">
 <meta property="article:author" content="浪漫的程序员">
 <meta property="article:tag" content="Java爱好者">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/","path":"2022/02/13/跳跃游戏/","title":"LeetCode 55.跳跃游戏"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 不务正业的日子</title>
+<title>LeetCode 55.跳跃游戏 | 不务正业的日子</title>
   
 
 
@@ -68,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">不务正业的日子</h1>
+      <p class="site-title">不务正业的日子</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">张先生</p>
@@ -166,149 +168,88 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ztt.jpg">
+      <meta itemprop="name" content="浪漫的程序员">
+      <meta itemprop="description" content="篮球🏀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不务正业的日子">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode 55.跳跃游戏
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-02-13 22:14:07 / 修改时间：22:19:41" itemprop="dateCreated datePublished" datetime="2022-02-13T22:14:07+08:00">2022-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>算法：能到达某一个位置，则在该位置之前的每个位置都能到达。<br>          通过计算最远距离max之前每个位置能到达的最远距离d（下标+数组元素），从而不断更新最远距离max<br>          如果最远距离max大于数组最后位置，返回true，其余返回else</p>
+<p>解题代码：<br>class Solution {<br>    public boolean canJump(int[] nums) {<br>        int d=0,max=0;<br>        for(int i=0;i&lt;=max;i++){<br>            d=i+nums[i];<br>            max=Math.max(d,max);<br>            if(max&gt;=nums.length-1)<br>            return true;<br>        }<br>        return false;<br>    }<br>}</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T22:14:15+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/%E6%8C%89%E5%BA%8F%E6%89%93%E5%8D%B0/" itemprop="url">
-            <span itemprop="name">LeetCode 1114.按序打印</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/13/%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8/" rel="prev" title="LeetCode 11.盛水最多的容器">
+                  <i class="fa fa-chevron-left"></i> LeetCode 11.盛水最多的容器
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/02/13/%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/" rel="next" title="LeetCode 48.旋转图像">
+                  LeetCode 48.旋转图像 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T22:14:07+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/" itemprop="url">
-            <span itemprop="name">LeetCode 48.旋转图像</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T22:14:07+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" itemprop="url">
-            <span itemprop="name">LeetCode 55.跳跃游戏</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T22:14:07+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8/" itemprop="url">
-            <span itemprop="name">LeetCode 11.盛水最多的容器</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-13T22:07:30+08:00"
-              content="2022-02-13">
-          02-13
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/13/Nim%E6%B8%B8%E6%88%8F/" itemprop="url">
-            <span itemprop="name">LeetCode 292.Nim游戏</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-23T13:42:43+08:00"
-              content="2022-01-23">
-          01-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/23/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 </div>
   </main>

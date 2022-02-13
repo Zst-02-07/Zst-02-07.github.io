@@ -132,7 +132,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,300 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/%E6%8C%89%E5%BA%8F%E6%89%93%E5%8D%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ztt.jpg">
+      <meta itemprop="name" content="浪漫的程序员">
+      <meta itemprop="description" content="篮球🏀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不务正业的日子">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/13/%E6%8C%89%E5%BA%8F%E6%89%93%E5%8D%B0/" class="post-title-link" itemprop="url">LeetCode 1114.按序打印</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-13 22:14:15 / 修改时间：22:19:26" itemprop="dateCreated datePublished" datetime="2022-02-13T22:14:15+08:00">2022-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>算法：<br>通过Object类的wait方法让线程等待，直到其他线程调用此对象的notifyAll方法，唤醒该对象等待的所有线程。<br>Object是三个线程的共享对象，通过对象锁机制可以控制线程执行顺序。<br>解题代码：<br>class Foo {<br>    private Object object=new Object();                        //对象锁<br>    private int flag=1;                            //判断执行顺序<br>    public Foo() {</p>
+<pre><code>&#125;
+
+public void first(Runnable printFirst) throws InterruptedException &#123;
+    synchronized(object)&#123;                            
+        while(flag!=1) object.wait();
+    // printFirst.run() outputs &quot;first&quot;. Do not change or remove this line.
+    printFirst.run();
+    flag=2;
+    object.notifyAll();
+    &#125;
+&#125;
+
+public void second(Runnable printSecond) throws InterruptedException &#123;
+    synchronized(object)&#123;
+        while(flag!=2) object.wait();
+    // printSecond.run() outputs &quot;second&quot;. Do not change or remove this line.
+    printSecond.run();
+    flag=3;
+    object.notifyAll();
+    &#125;
+&#125;
+
+public void third(Runnable printThird) throws InterruptedException &#123;
+     synchronized(object)&#123;
+        while(flag!=3) object.wait();
+    // printThird.run() outputs &quot;third&quot;. Do not change or remove this line.
+    printThird.run();
+&#125;
+&#125;
+</code></pre>
+<p>}</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ztt.jpg">
+      <meta itemprop="name" content="浪漫的程序员">
+      <meta itemprop="description" content="篮球🏀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不务正业的日子">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/13/%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F/" class="post-title-link" itemprop="url">LeetCode 48.旋转图像</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-13 22:14:07 / 修改时间：22:19:47" itemprop="dateCreated datePublished" datetime="2022-02-13T22:14:07+08:00">2022-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>算法(找规律)：<br> 观察发现，顺时针旋转90°即可<br>    顺时针旋转90°又可拆分为水平线翻折，再按主对角线翻折</p>
+<p>解题代码：<br>class Solution {<br>    public void rotate(int[][] matrix) {<br>        for(int i=0;i&lt;matrix.length/2;i++)             //水平翻折<br>        for(int j=0;j&lt;matrix.length;j++){<br>            int temp=matrix[i][j];<br>            matrix[i][j]=matrix[matrix.length-1-i][j];<br>            matrix[matrix.length-1-i][j]=temp;<br>        }<br>        for(int i=0;i&lt;matrix.length;i++)            //主对角线翻折<br>        for(int j=0;j&lt;i;j++){<br>            int temp=matrix[i][j];<br>            matrix[i][j]=matrix[j][i];<br>            matrix[j][i]=temp;<br>        }<br>    }<br>}</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ztt.jpg">
+      <meta itemprop="name" content="浪漫的程序员">
+      <meta itemprop="description" content="篮球🏀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不务正业的日子">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/13/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">LeetCode 55.跳跃游戏</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-13 22:14:07 / 修改时间：22:19:41" itemprop="dateCreated datePublished" datetime="2022-02-13T22:14:07+08:00">2022-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>算法：能到达某一个位置，则在该位置之前的每个位置都能到达。<br>          通过计算最远距离max之前每个位置能到达的最远距离d（下标+数组元素），从而不断更新最远距离max<br>          如果最远距离max大于数组最后位置，返回true，其余返回else</p>
+<p>解题代码：<br>class Solution {<br>    public boolean canJump(int[] nums) {<br>        int d=0,max=0;<br>        for(int i=0;i&lt;=max;i++){<br>            d=i+nums[i];<br>            max=Math.max(d,max);<br>            if(max&gt;=nums.length-1)<br>            return true;<br>        }<br>        return false;<br>    }<br>}</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ztt.jpg">
+      <meta itemprop="name" content="浪漫的程序员">
+      <meta itemprop="description" content="篮球🏀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不务正业的日子">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/02/13/%E7%9B%9B%E6%B0%B4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AE%B9%E5%99%A8/" class="post-title-link" itemprop="url">LeetCode 11.盛水最多的容器</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-02-13 22:14:07 / 修改时间：22:19:33" itemprop="dateCreated datePublished" datetime="2022-02-13T22:14:07+08:00">2022-02-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>算法(双指针)：<br>1.规定两个指针i,j分别位于两端<br>2.在两指针相遇之前,计算面积s,更新面积的最大值max<br>3.选定短的，向中间移动，直至相遇</p>
+<p>解题代码：<br>class Solution {<br>    public int maxArea(int[] height) {<br>        int i=0,j=height.length-1,s=0,max=0;        //i从左开始移动,j从右开始移动,s代表面积,max代表最大面积<br>        while(i&lt;j){<br>            s=(j-i)*Math.min(height[i],height[j]);    //求面积<br>            max=Math.max(s,max);        //找出面积最大值<br>            if(height[i]&lt;height[j]){            //左右指针的移动<br>                i++;<br>            }<br>            else j–;<br>        }<br>        return max;<br>    }<br>}</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/13/Nim%E6%B8%B8%E6%88%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -189,7 +483,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/13/Nim%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">未命名</a>
+          <a href="/2022/02/13/Nim%E6%B8%B8%E6%88%8F/" class="post-title-link" itemprop="url">LeetCode 292.Nim游戏</a>
         </h2>
 
         <div class="post-meta-container">
@@ -199,15 +493,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-02-13 22:07:30" itemprop="dateCreated datePublished" datetime="2022-02-13T22:07:30+08:00">2022-02-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-12 18:57:14" itemprop="dateModified" datetime="2022-02-12T18:57:14+08:00">2022-02-12</time>
+      <time title="创建时间：2022-02-13 22:07:30 / 修改时间：22:11:32" itemprop="dateCreated datePublished" datetime="2022-02-13T22:07:30+08:00">2022-02-13</time>
     </span>
 
   
@@ -220,7 +508,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>LeetCode 292.Nim游戏<br>算法(归纳推理)：<br>1.n为1，2，3时，自己获胜<br>2.n为4，对方获胜<br>3.n为5，6，7时，自己获胜<br>4.n为8，对方获胜<br>推理可得，n为4，8，……即4的倍数时，对方获胜。</p>
+          <p>算法(归纳推理)：<br>1.n为1，2，3时，自己获胜<br>2.n为4，对方获胜<br>3.n为5，6，7时，自己获胜<br>4.n为8，对方获胜<br>推理可得，n为4，8，……即4的倍数时，对方获胜。</p>
 <p>解题代码：<br>class Solution {<br>    public boolean canWinNim(int n) {<br>        return n%4!=0;<br>    }<br>}</p>
 
       
